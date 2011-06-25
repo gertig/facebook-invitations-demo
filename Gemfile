@@ -11,4 +11,4 @@ gem 'jquery-rails'
 gem 'backbonejs-rails', "~> 0.0.3"
 gem 'omniauth'
 #gem 'koala'
-gem "mongrel", "~> 1.2.0.pre2"
+#gem "mongrel", "~> 1.2.0.pre2"
