@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>First name:</b>
+  <%= @user.first_name %>
+</p>
+
+<p>
+  <b>Last name:</b>
+  <%= @user.last_name %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @user.email %>
+</p>
+
+<p>
+  <b>Number of friends:</b>
+  <%= @user.number_of_friends %>
+</p>
+
+<p>
+  <b>Fb:</b>
+  <%= @user.fb_uid %>
+</p>
+
+<p>
+  <b>Fb access token:</b>
+  <%= @user.fb_token %>
+</p>
+
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>

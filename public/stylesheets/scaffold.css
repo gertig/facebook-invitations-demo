@@ -1,0 +1,85 @@
+/* FACEBOOK BUTTON */
+a.connect_with_facebook_button{
+  display:block; width:250px; height:50px; margin: 30px auto 10px; 
+  text-indent:-10000px;
+  background:transparent url("/images/connect_facebook.png") top left no-repeat;
+}
+
+a.connect_with_facebook_button:hover{background-position:0 -50px}
+
+div#facebook_app {
+  width: 480px;
+  height: 300px;
+  background: #CCCCCC;
+  border: 2px solid #336699;
+  margin: 10px auto;
+}
+
+div#nav, div#friends {
+  margin: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+h2 {
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+body { background-color: #fff; color: #333; }
+
+body, p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size:   13px;
+  line-height: 18px;
+}
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+a { color: #000; }
+a:visited { color: #666; }
+/* a:hover { color: #fff; background-color:#000; } */
+
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+
+#notice {
+  color: green;
+}
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  margin-bottom: 0px;
+  background-color: #c00;
+  color: #fff;
+}
+
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}

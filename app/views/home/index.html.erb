@@ -1,0 +1,35 @@
+    <h2>Awesome App</h2>
+<div id="facebook_app">
+  <div id="nav">
+    <% if current_user %>
+         Hello, <%= current_user.first_name %> | <%= link_to "Sign out", signout_path %>
+    <% else %>
+        <%= link_to "Login With Facebook", "/auth/facebook", :class => "connect_with_facebook_button" %>
+    <% end %>
+  </div>
+
+  <% if current_user %>
+    <div id="friends">
+      <p><%= link_to "Invite Facebook Friends", "#", :id => "invite_fb_friends" %></p>
+
+      <div id="fb-root"></div>
+
+      <script src="http://connect.facebook.net/en_US/all.js"></script>
+
+      <script>
+        $(function(){
+    
+          $("a#invite_fb_friends").click(function() {
+            FB.init({ 
+               appId:'109969585764747', 
+               cookie:true, 
+               status:true
+            });
+      
+            FB.ui({ method: 'apprequests', message: '<%= current_user.first_name %> wants you to use an Awesome App.'});
+          });
+        });
+      </script>
+    </div>
+  <% end %>
+</div>

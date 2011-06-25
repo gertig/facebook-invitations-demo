@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  first_name: MyString
+  last_name: MyString
+  email: MyString
+  number_of_friends: 1
+  fb_uid: 1
+  fb_token: MyString
+
+two:
+  first_name: MyString
+  last_name: MyString
+  email: MyString
+  number_of_friends: 1
+  fb_uid: 1
+  fb_token: MyString
