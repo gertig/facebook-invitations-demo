@@ -1,16 +1,17 @@
 <div id="facebook_app">
-      <h2>Awesome App</h2>
+      <h2>Awesome People</h2>
   <div id="nav">
     <% if current_user %>
          Hello, <%= current_user.first_name %> | <%= link_to "Sign out", signout_path %>
     <% else %>
         <%= link_to "Login With Facebook", "/auth/facebook", :class => "connect_with_facebook_button" %>
+        <h3>if you are Awesome</h3>
     <% end %>
   </div>
 
   <% if current_user %>
     <div id="friends">
-      <p><%= link_to "Invite Facebook Friends", "#", :id => "invite_fb_friends" %></p>
+      <p><%= link_to "Invite Awesome Facebook Friends", "#", :id => "invite_fb_friends" %></p>
 
       <div id="fb-root"></div>
 
@@ -26,10 +27,18 @@
                status:true
             });
       
-            FB.ui({ method: 'apprequests', message: '<%= current_user.first_name %> wants you to use an Awesome App.'});
+            FB.ui({ method: 'apprequests', message: '<%= current_user.first_name %> <%= current_user.first_name %> thinks you are really Awesome.'});
           });
         });
       </script>
     </div>
   <% end %>
+  
+  <div id="awesome_friends">
+
+    <% @users.each do |user| %>
+      <p><%= user.first_name %> <%= user.last_name %> is Awesome!</p>
+    <% end %>
+
+  </div>
 </div>

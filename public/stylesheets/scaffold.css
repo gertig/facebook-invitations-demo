@@ -26,11 +26,11 @@ div#nav, div#friends {
   text-align: center;
 }
 
-h2 {
+h2, h3 {
   color: #336699;
   width: 100%;
   text-align: center;
-  margin-top: 0px;
+  margin-top: 10px;
 }
 
 body { background-color: #fff; color: #333; }
