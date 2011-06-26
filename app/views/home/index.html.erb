@@ -1,5 +1,5 @@
-    <h2>Awesome App</h2>
 <div id="facebook_app">
+      <h2>Awesome App</h2>
   <div id="nav">
     <% if current_user %>
          Hello, <%= current_user.first_name %> | <%= link_to "Sign out", signout_path %>
@@ -22,7 +22,7 @@
           $("a#invite_fb_friends").click(function() {
             FB.init({ 
                appId:'109969585764747', 
-               cookie:true, 
+               cookie:false, 
                status:true
             });
       
