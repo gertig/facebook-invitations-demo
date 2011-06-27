@@ -5,13 +5,13 @@
          Hello, <%= current_user.first_name %> | <%= link_to "Sign out", signout_path %>
     <% else %>
         <%= link_to "Login With Facebook", "/auth/facebook", :class => "connect_with_facebook_button" %>
-        <h3>if you are Awesome</h3>
+        <h3>Connect only if you are Awesome</h3>
     <% end %>
   </div>
 
   <% if current_user %>
     <div id="friends">
-      <p><%= link_to "Invite Awesome Facebook Friends", "#", :id => "invite_fb_friends" %></p>
+      <p><%= link_to "Invite Your Facebook Friends", "#", :id => "invite_fb_friends" %></p>
 
       <div id="fb-root"></div>
 
@@ -22,12 +22,12 @@
     
           $("a#invite_fb_friends").click(function() {
             FB.init({ 
-               appId:'109969585764747', 
+               appId:'138781652866563', 
                cookie:false, 
                status:true
             });
       
-            FB.ui({ method: 'apprequests', message: '<%= current_user.first_name %> <%= current_user.first_name %> thinks you are really Awesome.'});
+            FB.ui({ method: 'apprequests', message: '<%= current_user.first_name %> <%= current_user.last_name %> thinks you are really Awesome.'});
           });
         });
       </script>
