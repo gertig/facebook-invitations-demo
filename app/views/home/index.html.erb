@@ -5,7 +5,7 @@
          Hello, <%= current_user.first_name %> | <%= link_to "Sign out", signout_path %>
     <% else %>
         <%= link_to "Login With Facebook", "/auth/facebook", :class => "connect_with_facebook_button" %>
-        <h3>Connect only if you are Awesome</h3>
+        <h3>Please, connect ONLY if you are Awesome.</h3>
     <% end %>
   </div>
 
@@ -36,9 +36,14 @@
   
   <div id="awesome_friends">
 
-    <% @users.each do |user| %>
-      <p><%= user.first_name %> <%= user.last_name %> is Awesome!</p>
-    <% end %>
+    <table>
+      <% @users.each do |user| %>
+      <tr>
+        <td><%= user.first_name %> <%= user.last_name %> is Awesome!</td>
+      </tr>
+      <% end %>
+    </table>
+
 
   </div>
 </div>
